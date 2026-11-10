@@ -27,6 +27,33 @@ Skills hold the **process**. Your **rules** stay in each project's own files
 All 12 are written; only `repo-scout`, `pr-inspect` and `self-check` have had an install test
 (none has been tested on real PRs yet).
 
+## How to use
+
+Write it in plain words, or as a short command if your agent supports slash commands.
+The agent cannot read your ticket tool, so paste the requirements into the prompt.
+Square brackets are optional.
+
+| Skill | Example | What to give it |
+|---|---|---|
+| `ask-zay` | `ask-zay` or "which skill should I use for this ticket?" | Nothing, or a one-line goal |
+| `repo-scout` | `repo-scout` | Run it inside the repo. Answer which agent files the team uses |
+| `clarify` | `clarify` then paste the requirements | Requirements or a plan |
+| `deep-dig` | `deep-dig Redis vs Caffeine for caching` | The question and any constraints |
+| `blueprint` | `blueprint ACS-123` then paste the requirements | Ticket ID and requirements |
+| `build-it` | `build-it ACS-123 [guided\|assisted]` | A plan file (`plans/<id>.md`) |
+| `explain-this` | `explain-this src/.../UserService.java` or `explain-this PR 64` | A file, flow or PR |
+| `bug-hunt` | `bug-hunt` then paste the error or stack trace | Error text, steps to reproduce |
+| `self-check` | `self-check [low\|medium\|high]` then paste the requirements | Your branch with changes |
+| `pr-inspect` | `pr-inspect 64 [low\|medium\|high]` then paste the requirements | PR number or branch, requirements |
+| `second-look` | `second-look 64` | A finished `reviews/pr-64.md` |
+| `review-digest` | `review-digest [last 30 days]` | The `reviews/` folder |
+
+Depth for `pr-inspect` and `self-check`: **low** = requirements and blocking problems only;
+**medium** (default) = full review; **high** = also callers, database impact, concurrency,
+missing tests, and a suggestion to run `second-look`.
+
+Ticket IDs above are examples; use your own.
+
 ## Install
 
 ```

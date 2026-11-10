@@ -43,14 +43,16 @@ Square brackets are optional.
 | `build-it` | `build-it ACS-123 [guided\|assisted]` | A plan file (`plans/<id>.md`) |
 | `explain-this` | `explain-this src/.../UserService.java` or `explain-this PR 64` | A file, flow or PR |
 | `bug-hunt` | `bug-hunt` then paste the error or stack trace | Error text, steps to reproduce |
-| `self-check` | `self-check [low\|medium\|high]` then paste the requirements | Your branch with changes |
-| `pr-inspect` | `pr-inspect 64 [low\|medium\|high]` then paste the requirements | PR number or branch, requirements |
+| `self-check` | `self-check [low\|medium\|high] [--max-findings <n>\|all]` then paste the requirements | Your branch with changes |
+| `pr-inspect` | `pr-inspect [low\|medium\|high] 64 [--max-findings <n>\|all]` then paste the requirements | PR number or branch, requirements |
 | `second-look` | `second-look 64` | A finished `reviews/pr-64.md` |
 | `review-digest` | `review-digest [last 30 days]` | The `reviews/` folder |
 
 Depth for `pr-inspect` and `self-check`: **low** = requirements and blocking problems only;
 **medium** (default) = full review; **high** = also callers, database impact, concurrency,
 missing tests, and a suggestion to run `second-look`.
+`--max-findings <n>` keeps only the n most important findings (blocking first); `all` is the default.
+Parameters can be given in any order.
 
 Ticket IDs above are examples; use your own.
 

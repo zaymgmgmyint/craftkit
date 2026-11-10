@@ -1,6 +1,7 @@
 ---
 name: second-look
 description: Re-checks the findings of a finished PR review in a fresh context, trying to disprove each one against the code, and marks each as confirmed, not confirmed or downgraded. Use only when asked for a second opinion, or on a large or risky PR after pr-inspect has written its review. Do not use as the first review (pr-inspect), to review your own changes (self-check) or to fix code.
+argument-hint: "[<pr#>|<review-path>]"
 ---
 
 # second-look

@@ -1,6 +1,7 @@
 ---
 name: pr-inspect
 description: Reviews one pull request or branch against pasted ticket requirements and the repo's own rules, and writes a single review file with a verdict, a requirement check, and what/why/how comments. Use when asked to review, inspect or check a PR, a branch or a diff. Do not use for checking your own uncommitted changes (self-check), explaining code (explain-this), fixing a bug (bug-hunt) or planning a change (blueprint).
+argument-hint: "[low|medium|high] [<pr#>|<branch>] [--max-findings <n>|all]"
 ---
 
 # pr-inspect
@@ -8,7 +9,7 @@ description: Reviews one pull request or branch against pasted ticket requiremen
 Review one PR for a tech lead who will make the final call. Output is one file: `reviews/pr-<number>.md`. Read-only: never edit source files, push, comment on the PR, approve or merge.
 
 ## Inputs
-The user may write it in plain words or as a short command: `pr-inspect <PR number or branch> [low|medium|high]`, then paste the requirements. Depth defaults to medium.
+The user may write it in plain words or as a short command: `pr-inspect [low|medium|high] [<pr#>|<branch>] [--max-findings <n>|all]`, in any order, then paste the requirements. Depth defaults to medium. `--max-findings <n>` keeps only the n most important findings in the review file (blocking first); `all` is the default.
 - **low:** requirements check and blocking problems only (correctness, security, tests). No nits, no pre-existing section. For small or low-risk PRs.
 - **medium:** the full steps below.
 - **high:** medium, plus read the callers and callees of every changed method, check database and migration impact, think through concurrency and edge cases, and look for missing tests. End by recommending `second-look`.

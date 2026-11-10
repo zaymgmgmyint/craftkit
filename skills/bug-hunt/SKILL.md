@@ -1,6 +1,7 @@
 ---
 name: bug-hunt
 description: Finds and fixes a bug in an existing codebase in order - reproduce it, find the root cause, make the smallest fix, add a test that fails before and passes after - and writes short root-cause notes. Use when something is broken, a test fails, an error or stack trace appears, or behaviour is wrong. Do not use for new features (blueprint, build-it), reviews (pr-inspect) or explaining working code (explain-this).
+argument-hint: "[<error text>|<test name>]"
 ---
 
 # bug-hunt

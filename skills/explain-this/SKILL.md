@@ -1,6 +1,7 @@
 ---
 name: explain-this
 description: Explains code, a file, a flow, a diff, a PR or a database change in plain language, from a one-sentence summary down to the detail the reader asks for. Use when asked to explain, walk through, summarize or help understand code, a PR or how something works. Do not use to review it (pr-inspect), plan changes (blueprint) or find a bug (bug-hunt).
+argument-hint: "[<path>|<pr#>|<topic>]"
 ---
 
 # explain-this

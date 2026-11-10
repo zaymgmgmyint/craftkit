@@ -1,6 +1,7 @@
 ---
 name: blueprint
 description: Turns pasted ticket requirements into a short implementation plan for an existing codebase, saved as plans/<ticket-id>.md, listing the files to change, the existing pattern to follow, the steps, the tests and the risks. Use when starting a ticket or feature, or when asked to plan, scope or break down a change. Do not use to write the code (build-it), research options (deep-dig) or fix a bug (bug-hunt).
+argument-hint: "<ticket-id>"
 ---
 
 # blueprint

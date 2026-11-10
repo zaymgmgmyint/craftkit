@@ -1,6 +1,7 @@
 ---
 name: deep-dig
 description: Researches a technical question or choice - a library, pattern, migration path, version upgrade or design option - and returns the options, trade-offs, a recommendation and sources, in a form that can become a decision record. Use when asked to research, compare options, investigate an approach or decide between technologies. Do not use to plan a ticket (blueprint), clarify requirements (clarify) or explain existing code (explain-this).
+argument-hint: "<question>"
 ---
 
 # deep-dig

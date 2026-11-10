@@ -1,6 +1,7 @@
 ---
 name: self-check
 description: Lets a developer review their own uncommitted or unpushed changes before opening a PR, using the same rules and comment format a reviewer will use, and lists what to fix first. Use before committing, pushing or opening a pull request, or when asked to check my changes, my diff or my work. Do not use to review someone else's PR (pr-inspect), plan work (blueprint) or write the code (build-it).
+argument-hint: "[low|medium|high] [--max-findings <n>|all]"
 ---
 
 # self-check
@@ -8,7 +9,7 @@ description: Lets a developer review their own uncommitted or unpushed changes b
 Catch the problems a reviewer would raise, before they do. Read-only: report findings and suggest fixes, but do not edit files, commit or push unless the user asks.
 
 ## Inputs
-Plain words or a short command: `self-check [low|medium|high]`, then paste the requirements. Depth defaults to medium.
+Plain words or a short command: `self-check [low|medium|high] [--max-findings <n>|all]`, then paste the requirements. Depth defaults to medium.
 - **low:** requirements and blocking problems only; fast, before a small commit.
 - **medium:** the full steps below.
 - **high:** medium, plus read the callers and callees of changed code, database and migration impact, concurrency and edge cases, and missing tests.

@@ -1,6 +1,7 @@
 ---
 name: repo-scout
 description: Reads an existing codebase and drafts the small set of files that let AI agents and teammates work in it safely - a short codebase map, a glossary and a coding-standards file - and adds pointer lines to AGENTS.md or CLAUDE.md. Use when a repo has no such files, when they are missing or outdated, or when asked to scout, map or onboard a repo. Do not use to review a PR (pr-inspect), plan a change (blueprint) or write feature code (build-it).
+argument-hint: "[<path>]"
 ---
 
 # repo-scout

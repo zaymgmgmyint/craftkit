@@ -1,6 +1,7 @@
 ---
 name: review-digest
 description: Rolls up many saved review files (reviews/pr-*.md) into one digest grouped by rule, showing the most repeated problems, what to teach, and which rules to add, tighten or automate. Use when asked to summarize reviews, find patterns in review findings, prepare a team retro, or see which mistakes keep coming back. Do not use to review a PR (pr-inspect) or check your own changes (self-check).
+argument-hint: "[<period>|<pr# list>]"
 ---
 
 # review-digest

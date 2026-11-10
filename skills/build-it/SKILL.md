@@ -1,6 +1,7 @@
 ---
 name: build-it
 description: Builds a change step by step from a plan, following the repo's existing patterns and rules, running tests after each step and stopping for the developer to check. Use when asked to implement, build or code a ticket or a planned change, with or without an AI doing the typing. Do not use to make the plan (blueprint), review code (pr-inspect or self-check) or investigate a bug (bug-hunt).
+argument-hint: "[guided|assisted] [<ticket-id>|<plan-path>]"
 ---
 
 # build-it

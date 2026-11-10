@@ -1,6 +1,7 @@
 ---
 name: ask-zay
 description: Entry point that lists the craftkit skills, says which one fits the job at hand, and shows the usual order of work from scouting a repo to reviewing a PR. Use when asked what skills exist, which one to use, how the workflow goes, or when unsure where to start on a ticket or review. Do not use to do the work itself; hand off to the matching skill.
+argument-hint: "[<goal>]"
 ---
 
 # ask-zay

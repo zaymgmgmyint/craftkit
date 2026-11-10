@@ -1,6 +1,7 @@
 ---
 name: clarify
 description: Questions a vague request or plan one question at a time, using the real code to ground each question, and ends with a list of decisions made and questions still open. Use when requirements are unclear, when two readings are possible, when the user says stress-test, challenge or clarify this, or before planning a risky change. Do not use to plan (blueprint), research options (deep-dig) or review a PR (pr-inspect).
+argument-hint: "[<ticket-id>|<plan-path>]"
 ---
 
 # clarify
